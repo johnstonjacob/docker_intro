@@ -1,0 +1,26 @@
+{
+  "name": "docker-intro",
+  "version": "0.1.0",
+  "description": "Mini-sprint lecture for Docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnstonjacob/docker_intro.git"
+  },
+  "author": "johnstonjacob",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnstonjacob/docker_intro/issues"
+  },
+  "homepage": "https://github.com/johnstonjacob/docker_intro#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.38.0"
+  }
+}
