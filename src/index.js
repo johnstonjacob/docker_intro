@@ -9,11 +9,11 @@ const responseObject = {
 const app = express();
 const port = process.env.PORT || 8080;
 
-app.use('/volume', express.static('./src/www/'))
+app.use('/volume', express.static('/var/www/'))
 
 const sql = new Sequelize('dockerintro', 'postgres', 'dockerintropw', {
-  host: 'prod-postgres',
   dialect: 'postgres',
+  host: 'prod-postgres',
   logging: false,
   operatorsAliases: false,
   },
@@ -25,7 +25,7 @@ sql
     responseObject.successfulPostgresConnection = true;
     console.log('Successful Connection');
   })
-  .catch(() => console.log('Unsuccessful connection'));
+  .catch((err) => console.log('Unsuccessful connection', err));
 
 app.get('/', (_, res) => {
   res
